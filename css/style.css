@@ -1,0 +1,646 @@
+  :root {
+    --primary-color: #f13a11;
+    --white-color: #ffffff;
+    --dark-color: #171819;
+    --about-bg-color: #f9f9f9;
+
+    --gray-color: #909090;
+    --link-color: #404040;
+    --p-color: #666262;
+
+    --font-weight-bold: bold;
+    --font-weight-normal: normal;
+    --font-weight-light: 300;
+    --font-weight-thin: 100;
+
+    --p-font-size: 18px;
+    --base-font-size: 16px;
+    --menu-font-size: 18px;
+
+    --border-radius-large: 100%;
+    --border-radius-small: 10px;
+  }
+
+  body {
+    background: var(--white-color);
+    font-family: 'Dancing Script', cursive !important;
+    font-family: 'Noto Sans TC', sans-serif !important;
+  }
+
+
+  /*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: var(--font-weight-thin);
+    line-height: normal;
+    color: var(--white-color);
+  }
+
+  .section {
+    padding: 7rem 0;
+  }
+
+
+  /* BUTTON */
+
+  .custom-btn {
+    border-radius: var(--border-radius-small);
+    padding: 14px 24px;
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    color: var(--white-color);
+    background-color: var(--primary-color);
+  }
+
+  .custom-btn:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+  }
+
+  /*---------------------------------------
+     MENU             
+  -----------------------------------------*/
+
+  .navbar {
+    background: var(--dark-color);
+    padding: 1rem;
+    outline: #f13a11;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem;
+  }
+
+  .navbar-brand img {
+    width: 200px;
+  }
+
+  .nav-item .nav-link {
+    display: block;
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    font-weight: var(--font-weight-normal);
+    padding: 2px 6px;
+  }
+
+  .nav-item .nav-link.active,
+  .nav-item .nav-link:hover {
+    color: var(--primary-color);
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(241, 58, 17)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  .navbar-toggler {
+    border-color: var(--primary-color);
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar .social-icon li a {
+    color: var(--white-color);
+  }
+
+  /*---------------------------------------
+     LOGIN MODAL              
+  -----------------------------------------*/
+
+  .divider:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+  }
+
+  .modal-header {
+    border: none;
+  }
+
+  .btn-close {
+    box-shadow: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f13a11'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+    opacity: 1;
+  }
+
+  .btn-close:focus {
+    box-shadow: none;
+  }
+
+  .modal-content {
+    background-color: var(--dark-color);
+  }
+
+  /*---------------------------------------
+     HERO              
+  -----------------------------------------*/
+  #home {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/bg-RUN.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  .home_container {
+    position: absolute;
+    left: -5%;
+    top: 10%;
+    width: 100%;
+  }
+
+  .home_title {
+    font-size: 100px;
+    color: var(--white-color);
+    letter-spacing: 1rem;
+  }
+
+  .home_title p {
+    font-size: 50px;
+    color: var(--white-color);
+    margin-top: -10px;
+  }
+
+  .home_subtitle {
+    font-size: 25px;
+    color: var(--white-color);
+    letter-spacing: 3px;
+  }
+
+  /*---------------------------------------
+     ABOUT               
+  -----------------------------------------*/
+
+  .about {
+    background: var(--dark-color);
+    padding: 7rem 0;
+  }
+
+  .about h1 {
+    display: inline-block;
+    letter-spacing: 10px;
+  }
+
+  .about span {
+    color: var(--white-color);
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
+
+  .aboutTextB {
+    position: relative;
+    left: 60px;
+  }
+
+  .aboutItem {
+    cursor: grab;
+  }
+
+  .owl-carousel .owl-stage {
+    display: flex;
+  }
+
+  .owl-carousel .owl-item img {
+    height: 28rem;
+    object-fit: cover;
+  }
+
+  /*---------------------------------------
+     CLASS             
+  -----------------------------------------*/
+  .class {
+    background-color: var(--white-color);
+  }
+
+  .section-title h1 {
+    color: var(--dark-color);
+    text-align: center;
+    display: block;
+  }
+
+  .class-item {
+    overflow: hidden;
+  }
+
+  .class-item .ci-text {
+    background: var(--dark-color);
+    position: relative;
+    padding: 10px 30px 25px 30px;
+    z-index: 1;
+  }
+
+  .class-item .ci-text:after {
+    position: absolute;
+    left: -5px;
+    top: -30px;
+    height: 100px;
+    width: 700px;
+    border-top: 5px solid #f13a11;
+    background: var(--dark-color);
+    content: "";
+    transform: rotate(-5deg);
+    z-index: -1;
+  }
+
+  .class-item .ci-text a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color: var(--primary-color);
+    position: absolute;
+    right: 50px;
+    bottom: 45px;
+  }
+
+  .class-item .ci-text span {
+    color: var(--primary-color);
+    font-size: 15px;
+    font-weight: 700px;
+  }
+
+  .ci-text i {
+    color: var(--primary-color);
+  }
+
+  .ci-text i:hover {
+    color: var(--white-color);
+  }
+
+  /*---------------------------------------
+     CLASS MODAL             
+  -----------------------------------------*/
+
+  .classModal_center .row .col {
+    border: 5px solid var(--white-color);
+    color: var(--white-color);
+
+  }
+
+  .classModal_center .row .col:hover,
+  .classModal_center .row .col:focus {
+    border: 5px solid var(--primary-color);
+    color: var(--white-color);
+  }
+
+  .classModal_center .row .col h1 {
+    color: var(--primary-color);
+  }
+
+  .classModal_center {
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .classModal_center .modal-footer {
+    justify-content: center;
+    border: none !important;
+  }
+
+
+
+  /*---------------------------------------
+     SCHEDULE             
+  -----------------------------------------*/
+
+  .schedule {
+    background: var(--dark-color);
+  }
+
+  .schedule-table {
+    display: table;
+    border: 0;
+    text-align: center;
+  }
+
+  .schedule-table strong,
+  .schedule-table span {
+    display: block;
+    text-align: center;
+  }
+
+  .schedule-table strong {
+    color: var(--white-color);
+  }
+
+  .schedule-table span {
+    color: var(--white-color);
+  }
+
+  .schedule-table span,
+  .schedule-table small {
+    font-size: var(--menu-font-size);
+  }
+
+  .schedule-table small {
+    position: relative;
+    top: 10px;
+  }
+
+  .table .thead-light th,
+  .schedule-table tr td:first-child {
+    background: var(--gray-color);
+    border: 1px solid white;
+    color: var(--white-color);
+  }
+
+  .schedule-table .thead-light th {
+    font-size: 20px;
+  }
+
+  .table-bordered td,
+  .table-bordered th {
+    border: 1px solid white;
+    background-color: var(--dark-color);
+  }
+
+  .table td,
+  .table th {
+    padding: 1rem;
+  }
+
+  .scheduleChange {
+    background-color: var(--primary-color) !important;
+  }
+
+  .schedule button {
+    font-size: 20px;
+  }
+
+  .schedule button img {
+    width: 50px;
+  }
+
+  .schedule table td img {
+    width: 30px;
+  }
+
+  .QK td {
+    background-color: var(--gray-color) !important;
+  }
+
+  #Muscle_Sculpting:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(42%) saturate(5794%) hue-rotate(0deg) brightness(103%) contrast(89%);
+
+  }
+
+  #Pilates:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(42%) saturate(5794%) hue-rotate(0deg) brightness(103%) contrast(89%);
+
+  }
+
+  #kettlebell:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(42%) saturate(5794%) hue-rotate(0deg) brightness(103%) contrast(89%);
+
+  }
+
+  #Thump_Boxing:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(42%) saturate(5794%) hue-rotate(0deg) brightness(103%) contrast(89%);
+
+  }
+
+  #Body_Combat:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(42%) saturate(5794%) hue-rotate(0deg) brightness(103%) contrast(89%);
+
+  }
+
+  #TRX:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(42%) saturate(5794%) hue-rotate(0deg) brightness(103%) contrast(89%);
+  }
+
+  /*---------------------------------------
+     CONTACT              
+  -----------------------------------------*/
+
+  .contact {
+    background-color: var(--white-color);
+  }
+
+  .form-control {
+    border-radius: var(--border-radius-small);
+    margin: 1.3rem 0;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+    border-color: var(--dark-color);
+  }
+
+  button.submit-button {
+    background: var(--dark-color);
+    color: var(--white-color);
+    cursor: pointer;
+    font-size: var(--menu-font-size);
+  }
+
+  button.submit-button:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+  }
+
+  .google-map {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    width: 100%;
+    height: 400px !important;
+  }
+
+  .contact h2 {
+    color: var(--dark-color);
+    text-align: center;
+  }
+
+  .contact h3,
+  .contact p {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+  }
+
+  /*---------------------------------------
+     FOOTER              
+  -----------------------------------------*/
+
+  .site-footer {
+    background-color: var(--dark-color);
+    border-top: 1px solid #efebeb;
+    padding: 3rem 0;
+  }
+
+  .site-footer a {
+    color: var(--white-color);
+    font-weight: var(--font-weight-light);
+  }
+
+  .site-footer p {
+    font-size: var(--base-font-size);
+    color: var(--white-color);
+    display: block;
+  }
+
+  /*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+
+  @media screen and (max-width: 992px) {
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .section {
+      padding: 6rem 0;
+    }
+
+    .home_container {
+      position: relative;
+      top: 8rem;
+      left: 1rem;
+    }
+
+    .home_title {
+      font-size: 80px;
+      color: var(--white-color);
+      letter-spacing: 1rem;
+    }
+
+    .home_title p {
+      font-size: 40px;
+      color: var(--white-color);
+      letter-spacing: 20px;
+    }
+
+    .home_subtitle {
+      font-size: 25px;
+      color: var(--white-color);
+      letter-spacing: 0;
+    }
+
+    .about span {
+      color: var(--white-color);
+      letter-spacing: 5px;
+      font-size: 20px;
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .section {
+      padding: 3rem 0;
+    }
+
+    .navbar-brand img {
+      width: 150px;
+    }
+
+    .navbar .container {
+      justify-content: space-around;
+      padding: 0;
+    }
+
+    .navbar {
+      padding: 0;
+    }
+
+    .about {
+      padding: 4rem 0;
+    }
+
+    .about span {
+      color: var(--white-color);
+      letter-spacing: 5px;
+      font-size: 15px;
+    }
+
+    .home_container {
+      position: relative;
+      top: 3rem;
+      left: 1rem;
+    }
+
+    .home_title {
+      font-size: 50px;
+      color: var(--white-color);
+      letter-spacing: 1rem;
+    }
+
+    .home_title p {
+      font-size: 25px;
+      color: var(--white-color);
+      letter-spacing: 5px;
+    }
+
+    .home_subtitle {
+      font-size: 5px;
+      color: var(--white-color);
+      letter-spacing: 0;
+    }
+
+    .background_image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/bg-RUN.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center right 40%;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    .schedule button {
+      font-size: 10px;
+    }
+
+    .schedule button img {
+      width: 20px;
+    }
+
+    .custom-btn {
+      border-radius: var(--border-radius-small);
+      padding: 10px;
+      font-size: var(--menu-font-size);
+      font-weight: var(--font-weight-normal);
+      color: var(--white-color);
+      background-color: var(--primary-color);
+    }
+
+    .classModal_center {
+      top: 0;
+    }
+
+    .site-footer p {
+      text-align: center;
+    }
+
+  }

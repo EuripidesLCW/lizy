@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIZY</title>
+    <!-- title icon -->
+    <link rel="icon" href="./images/LOGO_icon.png" />
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+TC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font-Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <!-- Owl -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Googl map -->
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="0">
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img src="./images/LOGO.png" alt="LOGO"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-around text-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item js-scroll-trigger">
+              <a href="#home" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item js-scroll-trigger">
+              <a href="#about" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item js-scroll-trigger">
+              <a href="#class" class="nav-link">CLASS</a>
+            </li>
+            <li class="nav-item js-scroll-trigger">
+              <a href="#schedule" class="nav-link">SCHEDULE</a>
+            </li>
+            <li class="nav-item js-scroll-trigger">
+              <a href="#contact" class="nav-link">LOCATIONS</a>
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="btn custom-btn bordered p-2"
+            data-bs-toggle="modal"
+            data-bs-target="#login"
+          >
+            LOG IN
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade bd-example-modal-lg" id="login">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="row align-items-center">
+            <div class="col">
+              <div class="modal-body text-center">
+                <h3>會員登入</h3>
+                <form action="#">
+                  <div>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Phone"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div>
+                    <button
+                      type="button"
+                      class="form-control submit-button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                    >
+                      登入
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-1 divider"></div>
+            <div class="col">
+              <form action="#">
+                <div class="modal-body text-center">
+                  <h3>會員註冊</h3>
+                  <div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Username"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="phone"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div>
+                    <button
+                      type="button"
+                      class="form-control submit-button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                    >
+                      註冊
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <section id="home">
+      <div class="background_image w-100"></div>
+      <div class="home_container">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="home_content">
+                <div class="home_title">
+                  瘦身
+                  <p class="mt-1">不是光靠想像</p>
+                </div>
+                <div class="home_subtitle mb-3">SLIMMING NOT JUST BY IMAGE</div>
+                <a href="#class" class="btn custom-btn">Join Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" style="height: 80vh">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-12 aboutTextA">
+            <h1 class="mb-3" data-aos="fade-up">放棄</h1>
+            <span data-aos="fade-up">可以找到一萬個理由</span>
+          </div>
+          <div class="col-12 aboutTextB">
+            <h1 class="mb-3" data-aos="fade-up">堅持</h1>
+            <span data-aos="fade-up">只需一個信念</span>
+          </div>
+          <div class="col-12">
+            <div class="owl-carousel">
+              <div class="aboutItem">
+                <img src="./images/ABOUT/about_carousel (1).jpg" alt="" />
+              </div>
+              <div class="aboutItem">
+                <img src="./images/ABOUT/about_carousel (2).jpg" alt="" />
+              </div>
+              <div class="aboutItem">
+                <img src="./images/ABOUT/about_carousel (3).jpg" alt="" />
+              </div>
+              <div class="aboutItem">
+                <img src="./images/ABOUT/about_carousel (4).jpg" alt="" />
+              </div>
+              <div class="aboutItem">
+                <img src="./images/ABOUT/about_carousel (5).jpg" alt="" />
+              </div>
+              <div class="aboutItem">
+                <img src="./images/ABOUT/about_carousel (6).jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASS -->
+    <section class="class section" id="class">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title my-3">
+              <h1 data-aos="fade-up">課程資訊</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="class-item mb-4">
+              <div class="ci-pic">
+                <img
+                  class="img-fluid"
+                  src="./images/CLASS/1.Muscle_Sculpting.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="ci-text">
+                <span>難易度</span>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <h5>體態雕塑</h5>
+                <a data-bs-toggle="modal" data-bs-target="#Muscle_Sculpting_btn"
+                  ><i class="fa-solid fa-circle-chevron-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="class-item mb-3">
+              <div class="ci-pic">
+                <img
+                  class="img-fluid"
+                  src="./images/CLASS/2.Pilates.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="ci-text">
+                <span>難易度</span>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <h5>皮拉提斯</h5>
+                <a data-bs-toggle="modal" data-bs-target="#Pilates_btn"
+                  ><i class="fa-solid fa-circle-chevron-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="class-item mb-3">
+              <div class="ci-pic">
+                <img
+                  class="img-fluid"
+                  src="./images/CLASS/3.kettlebell.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="ci-text">
+                <span>難易度</span>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <h5>燃脂壺鈴</h5>
+                <a data-bs-toggle="modal" data-bs-target="#kettlebell_btn"
+                  ><i class="fa-solid fa-circle-chevron-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="class-item mb-3">
+              <div class="ci-pic">
+                <img
+                  class="img-fluid"
+                  src="./images/CLASS/4.Thump_Boxing.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="ci-text">
+                <span>難易度</span>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <h5>互動式拳擊</h5>
+                <a data-bs-toggle="modal" data-bs-target="#Thump_Boxing_btn"
+                  ><i class="fa-solid fa-circle-chevron-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="class-item mb-3">
+              <div class="ci-pic">
+                <img
+                  class="img-fluid"
+                  src="./images/CLASS/5.Body_Combat.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="ci-text">
+                <span>難易度</span>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <h5>戰鬥拳擊有氧</h5>
+                <a data-bs-toggle="modal" data-bs-target="#Body_Combat_btn"
+                  ><i class="fa-solid fa-circle-chevron-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="class-item mb-3">
+              <div class="ci-pic">
+                <img class="img-fluid" src="./images/CLASS/6.TRX.jpg" alt="" />
+              </div>
+              <div class="ci-text">
+                <span>難易度</span>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <i class="fa-sharp fa-solid fa-star"></i>
+                <h5>TRX</h5>
+                <a data-bs-toggle="modal" data-bs-target="#TRX_btn"
+                  ><i class="fa-solid fa-circle-chevron-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASS MODAL -->
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="Muscle_Sculpting_btn"
+      tabindex="-1"
+      aria-labelledby="classModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg classModal_center">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h1 class="modal-title" id="classModal">收費標準 體態雕塑</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col m-2" tabindex="-1">
+                <h3>單次</h3>
+                <h1>150/次</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程1堂<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>月費</h3>
+                <h1>1800/月</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程8堂<br />
+                  身體組成分析1次<br />
+                  一對一私人教練課程1堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>年費</h3>
+                <h1>16000/年</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程120堂<br />
+                  身體組成分析每月2次<br />
+                  一對一私人教練課程15堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn custom-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="Pilates_btn"
+      tabindex="-1"
+      aria-labelledby="classModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg classModal_center">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h1 class="modal-title" id="classModal">收費標準 皮拉提斯</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col m-2" tabindex="-1">
+                <h3>單次</h3>
+                <h1>150/次</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程1堂<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>月費</h3>
+                <h1>1800/月</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程8堂<br />
+                  身體組成分析1次<br />
+                  一對一私人教練課程1堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>年費</h3>
+                <h1>16000/年</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程120堂<br />
+                  身體組成分析每月2次<br />
+                  一對一私人教練課程15堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn custom-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="kettlebell_btn"
+      tabindex="-1"
+      aria-labelledby="classModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg classModal_center">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h1 class="modal-title" id="classModal">收費標準 燃脂壺鈴</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col m-2" tabindex="-1">
+                <h3>單次</h3>
+                <h1>150/次</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程1堂<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>月費</h3>
+                <h1>1800/月</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程8堂<br />
+                  身體組成分析1次<br />
+                  一對一私人教練課程1堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>年費</h3>
+                <h1>16000/年</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程120堂<br />
+                  身體組成分析每月2次<br />
+                  一對一私人教練課程15堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn custom-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="Thump_Boxing_btn"
+      tabindex="-1"
+      aria-labelledby="classModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg classModal_center">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h1 class="modal-title" id="classModal">收費標準 互動式拳擊</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col m-2" tabindex="-1">
+                <h3>單次</h3>
+                <h1>150/次</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程1堂<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>月費</h3>
+                <h1>1800/月</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程8堂<br />
+                  身體組成分析1次<br />
+                  一對一私人教練課程1堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>年費</h3>
+                <h1>16000/年</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程120堂<br />
+                  身體組成分析每月2次<br />
+                  一對一私人教練課程15堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn custom-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="Body_Combat_btn"
+      tabindex="-1"
+      aria-labelledby="classModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg classModal_center">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h1 class="modal-title" id="classModal">收費標準 戰鬥拳擊有氧</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col m-2" tabindex="-1">
+                <h3>單次</h3>
+                <h1>150/次</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程1堂<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>月費</h3>
+                <h1>1800/月</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程8堂<br />
+                  身體組成分析1次<br />
+                  一對一私人教練課程1堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>年費</h3>
+                <h1>16000/年</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程120堂<br />
+                  身體組成分析每月2次<br />
+                  一對一私人教練課程15堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn custom-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade bd-example-modal-lg"
+      id="TRX_btn"
+      tabindex="-1"
+      aria-labelledby="classModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg classModal_center">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h1 class="modal-title" id="classModal">收費標準 TRX</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col m-2" tabindex="-1">
+                <h3>單次</h3>
+                <h1>150/次</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程1堂<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>月費</h3>
+                <h1>1800/月</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程8堂<br />
+                  身體組成分析1次<br />
+                  一對一私人教練課程1堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+              <div class="col m-2" tabindex="-1">
+                <h3>年費</h3>
+                <h1>16000/年</h1>
+                <h5>可使用項目</h5>
+                <p>
+                  體驗課程120堂<br />
+                  身體組成分析每月2次<br />
+                  一對一私人教練課程15堂<br />
+                  毛巾服務 (每日乙次)<br />
+                  停車優惠<br />
+                  更衣室<br />
+                  置物櫃<br />
+                  淋浴間<br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn custom-btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              確認
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCHEDULE -->
+    <section class="schedule section" id="schedule">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-12 text-center">
+            <button class="btn custom-btn m-2" id="Muscle_Sculpting">
+              <img
+                class="mx-2"
+                src="./images/SCHEDULE/Muscle_Sculpting.png"
+                alt=""
+              />體態雕塑
+            </button>
+            <button class="btn custom-btn mx-1" id="Pilates">
+              <img
+                class="mx-2"
+                src="./images/SCHEDULE/Pilates.png"
+                alt=""
+              />皮拉提斯
+            </button>
+            <button class="btn custom-btn mx-1" id="kettlebell">
+              <img
+                class="mx-2"
+                src="./images/SCHEDULE/kettlebell.png"
+                alt=""
+              />燃脂壺鈴
+            </button>
+            <button class="btn custom-btn mx-1" id="Thump_Boxing">
+              <img
+                class="mx-2"
+                src="./images/SCHEDULE/Thump_Boxing.png"
+                alt=""
+              />互動式拳擊
+            </button>
+            <button class="btn custom-btn mx-1" id="Body_Combat">
+              <img
+                class="mx-2"
+                src="./images/SCHEDULE/Body_Combat.png"
+                alt=""
+              />戰鬥拳擊有氧
+            </button>
+            <button class="btn custom-btn mx-1" id="TRX">
+              <img class="mx-2" src="./images/SCHEDULE/TRX.png" alt="" />TRX
+            </button>
+          </div>
+          <div class="col-12 col-md-12 col-lg-12 py-2 table-responsive">
+            <table
+              class="table table-bordered table-responsive schedule-table"
+              id="table"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              style="color: white"
+            >
+              <thead class="thead-light">
+                <th></th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>9:00-10:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/kettlebell.png"
+                      alt=""
+                    />燃脂壺鈴
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Thump_Boxing.png"
+                      alt=""
+                    />互動式拳擊
+                  </td>
+                </tr>
+                <tr>
+                  <td>10:00-11:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                </tr>
+                <tr>
+                  <td>11:00-12:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/kettlebell.png"
+                      alt=""
+                    />燃脂壺鈴
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Thump_Boxing.png"
+                      alt=""
+                    />互動式拳擊
+                  </td>
+                </tr>
+                <tr class="QK">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>13:00-14:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                </tr>
+                <tr>
+                  <td>14:00-15:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/kettlebell.png"
+                      alt=""
+                    />燃脂壺鈴
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Thump_Boxing.png"
+                      alt=""
+                    />互動式拳擊
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:00-16:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                </tr>
+                <tr>
+                  <td>16:00-17:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/kettlebell.png"
+                      alt=""
+                    />燃脂壺鈴
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Thump_Boxing.png"
+                      alt=""
+                    />互動式拳擊
+                  </td>
+                </tr>
+                <tr>
+                  <td>17:00-18:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                </tr>
+                <tr class="QK">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>19:00-20:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/kettlebell.png"
+                      alt=""
+                    />燃脂壺鈴
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Thump_Boxing.png"
+                      alt=""
+                    />互動式拳擊
+                  </td>
+                </tr>
+                <tr>
+                  <td>20:00-21:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/TRX.png"
+                      alt=""
+                    />TRX
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Body_Combat.png"
+                      alt=""
+                    />戰鬥拳擊有氧
+                  </td>
+                </tr>
+                <tr>
+                  <td>21:00-22:00</td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Pilates.png"
+                      alt=""
+                    />皮拉提斯
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Muscle_Sculpting.png"
+                      alt=""
+                    />體態雕塑
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/kettlebell.png"
+                      alt=""
+                    />燃脂壺鈴
+                  </td>
+                  <td>
+                    <img
+                      class="mx-2"
+                      src="./images/SCHEDULE/Thump_Boxing.png"
+                      alt=""
+                    />互動式拳擊
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
+            <h2 data-aos="fade-up">附近分店</h2>
+            <div
+              class="google-map"
+              id="map"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            ></div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5 ml-auto">
+            <h2 class="mb-4 pb-2" data-aos="fade-up">聯繫我們</h2>
+            <form
+              action="#"
+              method="post"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              role="form"
+            >
+              <input type="text" class="form-control" placeholder="Name" />
+              <input type="email" class="form-control" placeholder="Email" />
+              <textarea
+                class="form-control"
+                rows="5"
+                placeholder="Message"
+              ></textarea>
+              <button type="button" class="form-control submit-button">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="me-auto col-lg-4 col-md-5">
+            <p>LIZY Fitness Co.</p>
+          </div>
+          <div
+            class="d-flex justify-content-center mx-auto col-lg-5 col-md-7 col-12"
+          >
+            <p class="me-4">
+              <a href="#">LIZY@lizy.com</a>
+            </p>
+            <p>04-12312345</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/style.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=輸入key&callback=initMap&v=weekly"
+      defer
+    ></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
